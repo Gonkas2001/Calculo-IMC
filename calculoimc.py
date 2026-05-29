@@ -53,14 +53,15 @@ def main_program ():
             
             soma_imc += IMC
             
-            classificacoes[classificacao_imc] += 1
+            classificacao = classificacao_imc (IMC)
+            classificacoes [classificacao] =+ 1
         
             if total__consultas > 0:
                 
                 media_imc = soma_imc / total__consultas
                 
-                classificacao_mais_frequente_registada = max (
-                    classificacao_imc,
+                classificacao_mais_frequente_registada = max(
+                    classificacoes,
                     key=classificacoes.get
                 )
             
