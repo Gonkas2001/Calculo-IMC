@@ -1,8 +1,8 @@
 def calculo_imc (peso: float, altura: int, altura_cm: int, IMC: float) -> float:
     
-    altura == altura_cm/100
+    altura = altura_cm/100
 
-    IMC == float( peso / (altura*altura))
+    IMC = float( peso / (altura*altura))
     
     return IMC  
 
@@ -19,12 +19,12 @@ while True:
 
         IMC = calculo_imc(peso, altura_cm)
         
-        print(f"\n O teu IMC é de: {IMC: .f}")
+        print(f"\n O teu IMC é de: {IMC: .2f}")
 
         if IMC < 18.5:
             print("\n Estás fora do peso normal.")
 
-        elif IMC >= 18.5 & IMC < 25:
+        elif IMC >= 18.5 and IMC < 25:
             print("\n Estás com peso normal.")
 
         elif IMC >= 25:
