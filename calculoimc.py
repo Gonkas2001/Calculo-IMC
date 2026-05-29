@@ -22,21 +22,49 @@ def classificacao_imc (IMC: float) -> str:
 
 def main_program ():
     
+    total__consultas = 0
+    soma_imc = 0
+
+    classificacoes = {
+        "Estás abaixo do  peso normal." = 0
+        "Estás abaixo do  peso normal." = 0
+        "Estás acima do peso normal." = 0
+        "Apresentas obesidade." = 0        
+    }
+    
+    
     while True:
-        
-        escolha = input("\n Olá, queres saber o teu IMC? (s/n): ").lower()
+            
+            escolha = input("\n Olá, queres saber o teu IMC? (s/n): ").lower()
 
-        if escolha not in ["s", "sim"]:
-            break
-        
-        peso = float(input("\n Quanto pesas, em kg?: "))
+            if escolha not in ["s", "sim"]:
+                break
+            
+            peso = float(input("\n Quanto pesas, em kg?: "))
 
-        altura_cm = int(input("\n Diz-me a tua altura em centímetros: "))
+            altura_cm = int(input("\n Diz-me a tua altura em centímetros: "))
 
-        IMC = calculo_imc(peso, altura_cm)
+            IMC = calculo_imc(peso, altura_cm)
+            
+            print(f"\n O teu IMC é de: {IMC: .2f}.")
+            
+            print(f"\n {classificacao_imc (IMC)}")
         
-        print(f"\n O teu IMC é de: {IMC: .2f}.")
-        print(f"\n {classificacao_imc (IMC)}")
+        total__consultas = += 1
+        soma_imc += IMC
+        classificacoes[classificacao_imc] += 1
         
+        if total__consultas > 0
+            
+            media_imc = soma_imc / total__consultas
+            
+            classificacao_mais_frequente_registada = max (
+                classificacao_imc,
+                key=classificacoes.get
+            )
+        
+        print(f"\n Númmero total de consultas realizadas: {total__consultas}"),
+        print(f"\n Média dos IMC calculados: {media_imc: .2f}"),
+        print(f"\n Classificação mais frequentemente registada: {classificacao_mais_frequente_registada}")
         
 main_program ()
