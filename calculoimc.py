@@ -1,23 +1,31 @@
-def calculo_imc (num1: float, num2: int, operador: str ) -> float:
+def calculo_imc (peso: float, altura_cm: int) -> float:
+    
+    altura == altura_cm/100
 
-escolha = input("\n Olá, queres saber o teu IMC? (s/n): ")
+    IMC == float( pesp / (altura*altura))
+    
+    return IMC  
 
-if escolha not in ["s", "sim"]:
-    break
+while True:
+        
+        escolha = input("\n Olá, queres saber o teu IMC? (s/n): ").lower()
 
-num1 = float(input("\n Quanto pesas, em kg?: "))
+        if escolha not in ["s", "sim"]:
+            break
 
-num2 = int(input("\n Diz-me a tua altura em centímetros: "))
+        num1 = float(input("\n Quanto pesas, em kg?: "))
 
-altura == num2/100
+        num2 = int(input("\n Diz-me a tua altura em centímetros: "))
 
-IMC == .2float( num1 / (altura*altura))
+        imc = calculo_imc(peso, altura_cm)
+        
+        print(f"\n O teu IMC é de: {imc}")
 
-if IMC < 18.5 
-    print("\n Estás fora do peso normal.")
+        if IMC < 18.5:
+            print("\n Estás fora do peso normal.")
 
-elif IMC >= 18.5 & IMC < 25 
-    print("\n Estás com peso normal.")
+        elif IMC >= 18.5 & IMC < 25:
+            print("\n Estás com peso normal.")
 
-elif IMC >= 25
-    print("\n Estás acima do peso normal")
+        elif IMC >= 25:
+            print("\n Estás acima do peso normal")
