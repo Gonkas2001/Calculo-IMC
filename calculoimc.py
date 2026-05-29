@@ -1,4 +1,4 @@
-def calculo_imc (peso: float, altura: int, altura_cm: int, IMC: float) -> float:
+def calculo_imc (peso: float, altura_cm: int) -> float:
     
     altura = altura_cm/100
 
@@ -12,7 +12,7 @@ while True:
 
         if escolha not in ["s", "sim"]:
             break
-
+        
         peso = float(input("\n Quanto pesas, em kg?: "))
 
         altura_cm = int(input("\n Diz-me a tua altura em centímetros: "))
@@ -29,3 +29,5 @@ while True:
 
         elif IMC >= 25:
             print("\n Estás acima do peso normal")
+            
+    
