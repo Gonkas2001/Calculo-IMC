@@ -6,7 +6,9 @@ def calculo_imc (peso: float, altura_cm: int) -> float:
     
     return IMC  
 
-while True:
+def main_program (IMC: float):
+    
+    while True:
         
         escolha = input("\n Olá, queres saber o teu IMC? (s/n): ").lower()
 
@@ -21,13 +23,18 @@ while True:
         
         print(f"\n O teu IMC é de: {IMC: .2f}")
 
+def classificacao_imc (IMC: float) -> str:
+    
         if IMC < 18.5:
-            print("\n Estás fora do peso normal.")
+            print("\n Estás abaixo do  peso normal.")
 
         elif IMC >= 18.5 and IMC < 25:
             print("\n Estás com peso normal.")
 
-        elif IMC >= 25:
-            print("\n Estás acima do peso normal")
+        elif IMC >= 25 and IMC < 30: 
+            print("\n Estás acima do peso normal.")
+        
+        elif IMC >= 30:
+            print("\n Apresentas obesidade.")
             
     
