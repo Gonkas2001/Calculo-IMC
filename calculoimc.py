@@ -6,7 +6,7 @@ def calculo_imc (peso: float, altura_cm: int) -> float:
     
     return IMC  
 
-def main_program (IMC: float):
+def main_program ():
     
     while True:
         
@@ -37,6 +37,4 @@ def classificacao_imc (IMC: float) -> str:
         elif IMC >= 30:
             print("\n Apresentas obesidade.")
             
-calculo_imc () 
 main_program ()
-classificacao_imc ()
