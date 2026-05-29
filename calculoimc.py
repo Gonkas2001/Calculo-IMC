@@ -37,4 +37,6 @@ def classificacao_imc (IMC: float) -> str:
         elif IMC >= 30:
             print("\n Apresentas obesidade.")
             
-    
+calculo_imc () 
+main_program ()
+classificacao_imc ()
