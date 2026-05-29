@@ -26,13 +26,12 @@ def main_program ():
     soma_imc = 0
 
     classificacoes = {
-        "Estás abaixo do  peso normal." = 0
-        "Estás abaixo do  peso normal." = 0
-        "Estás acima do peso normal." = 0
-        "Apresentas obesidade." = 0        
-    }
-    
-    
+        "Estás abaixo do  peso normal." : 0,
+        "Estás abaixo do  peso normal." : 0,
+        "Estás acima do peso normal." : 0,
+        "Apresentas obesidade." : 0
+        }
+        
     while True:
             
             escolha = input("\n Olá, queres saber o teu IMC? (s/n): ").lower()
@@ -50,21 +49,23 @@ def main_program ():
             
             print(f"\n {classificacao_imc (IMC)}")
         
-        total__consultas = += 1
-        soma_imc += IMC
-        classificacoes[classificacao_imc] += 1
-        
-        if total__consultas > 0
+            total__consultas += 1
             
-            media_imc = soma_imc / total__consultas
+            soma_imc += IMC
             
-            classificacao_mais_frequente_registada = max (
-                classificacao_imc,
-                key=classificacoes.get
-            )
+            classificacoes[classificacao_imc] += 1
         
-        print(f"\n Númmero total de consultas realizadas: {total__consultas}"),
-        print(f"\n Média dos IMC calculados: {media_imc: .2f}"),
-        print(f"\n Classificação mais frequentemente registada: {classificacao_mais_frequente_registada}")
-        
+            if total__consultas > 0:
+                
+                media_imc = soma_imc / total__consultas
+                
+                classificacao_mais_frequente_registada = max (
+                    classificacao_imc,
+                    key=classificacoes.get
+                )
+            
+            print(f"\n Númmero total de consultas realizadas: {total__consultas}"),
+            print(f"\n Média dos IMC calculados: {media_imc: .2f}"),
+            print(f"\n Classificação mais frequentemente registada: {classificacao_mais_frequente_registada}")
+            
 main_program ()
